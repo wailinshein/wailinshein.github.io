@@ -1,8 +1,15 @@
+:root {
+    --ws-sm: 1rem;
+    --lh-md: 150%;
+}
+
+
 body {
     background-color: ghostwhite;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+    /* height: 100vh; */
     margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -12,15 +19,16 @@ body {
     top: 0;
     width: 100%;
     height: 300px;
-
+    z-index: -1;
 }
 
 .imgtexts {
-    width: 80%;
-    height: 300px;
+
+    height: 80px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    align-items: center;
+
 }
 
 .image-2 {
@@ -28,18 +36,80 @@ body {
     height: 160px;
     border-radius: 50%;
     margin-top: -70px;
-    left: 0;
+
+    z-index: 999;
 }
 
 
-a {
+.text {
     font-size: 2rem;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
 }
 
+.margin-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+    .margin-wrapper {
+        width: 60%;
+    }
+}
+
 .text:hover {
     text-decoration: underline;
+    color: orangered;
+}
+
+.about-container {
+
+    height: 300px;
+    /* margin-left: 300px; */
+}
+
+.about-text {
+    font-size: 1.25em;
+    word-spacing: var(--ws-sm);
+    line-height: var(--lh-md);
+}
+
+.lower-background {
+    background-color: palegoldenrod;
+    width: 100%;
+    height: 70vh;
+}
+
+.tip-note {
+    width: 50%;
+    height: fit-content;
+    margin: 0 auto;
+    position: relative;
+    top: 60px;
+    background-color: wheat; 
+    border-radius: 10% 10% 15% 15%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    transform: rotate(3deg);
+    padding: 1rem;
+}
+
+
+.tip-note > p {
+    font-size: 1.3em;
+    font-family: cursive;
+}
+
+.bold {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.tip-note > p::first-letter {
+    font-size: 4em;
     color: orangered;
 }
